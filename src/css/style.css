@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import url(../libs/OwlCarousel2/dist/assets/owl.carousel.min.css);
+
 @font-face {
   font-family: "roboto-example";
   font-weight: normal;
@@ -6461,7 +6463,112 @@ html {
   }
 }
 
+.jssorl-004-double-tail-spin img {
+  animation-name: jssorl-004-double-tail-spin;
+  animation-duration: 1.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes jssorl-004-double-tail-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*jssor slider bullet skin 031 css*/
+.jssorb031 {
+  position: absolute;
+}
+
+.jssorb031 .i {
+  position: absolute;
+  cursor: pointer;
+}
+
+.jssorb031 .i .b {
+  fill: #000;
+  fill-opacity: 0.5;
+  stroke: #fff;
+  stroke-width: 1200;
+  stroke-miterlimit: 10;
+  stroke-opacity: 0.3;
+}
+
+.jssorb031 .i:hover .b {
+  fill: #fff;
+  fill-opacity: .7;
+  stroke: #000;
+  stroke-opacity: .5;
+}
+
+.jssorb031 .iav .b {
+  fill: #fff;
+  stroke: #000;
+  fill-opacity: 1;
+}
+
+.jssorb031 .i.idn {
+  opacity: .3;
+}
+
+/*jssor slider arrow skin 051 css*/
+.jssora051 {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+}
+
+.jssora051 .a {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 360;
+  stroke-miterlimit: 10;
+}
+
+.jssora051:hover {
+  opacity: .8;
+}
+
+.jssora051.jssora051dn {
+  opacity: .5;
+}
+
+.jssora051.jssora051ds {
+  opacity: .3;
+  pointer-events: none;
+}
+
 /*==========  user style  ==========*/
+button.view {
+  background-color: #e52714;
+  border: none;
+  color: #ffffff;
+  padding: 20px 30px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button.view-banner {
+  margin-top: 15px;
+}
+
+button.view:hover {
+  background-color: #333333;
+  animation: hvr-push .4s;
+}
+
+.container > h2 {
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
 a:hover {
   text-decoration: none;
   z-index: 9999;
@@ -6593,6 +6700,195 @@ a:hover {
   color: #ff2817;
 }
 
+.product-category {
+  margin: 30px 0;
+}
+
+.product-category__inner {
+  background: #000 url("../img/cat1.jpg") no-repeat 100% 50%;
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 35px;
+  margin: 15px 0;
+}
+
+.product-category__inner h2 {
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.product-category__inner h2:hover {
+  color: #e52714;
+}
+
+.product-category__inner:hover .product_subcategory {
+  display: block;
+  opacity: 1;
+}
+
+.product-category__item .product_subcategory {
+  padding: 0;
+  margin: 0S;
+  list-style: none;
+  opacity: 0;
+  transition: .5s;
+  display: none;
+}
+
+.product-category__item .product_subcategory li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.product-category__item .product_subcategory li::before {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #e52714;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.product-category__item .product_subcategory a {
+  color: #595959;
+}
+
+.product-category__item .product_subcategory a:hover {
+  color: #ffffff;
+}
+
+.brands {
+  margin-top: 30px;
+}
+
+.brands .owl-carousel img {
+  opacity: .15;
+  transition: 1s;
+}
+
+.brands .owl-carousel .col:hover img {
+  transform: rotate3d(0, 1, 0, -360deg);
+  opacity: 1;
+}
+
+.products,
+.featured-products {
+  margin: 70px 0;
+}
+
+.product-inner figure {
+  padding: 30px;
+}
+
+.product-inner .product-item-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.product-inner .product-item-wrap .product-name {
+  font-weight: normal;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.product-inner .product-item-wrap .product-name a {
+  color: #333333;
+}
+
+.product-inner .product-item-wrap .product-name a:hover {
+  color: #e52714;
+}
+
+.product-inner .product-item-wrap .price {
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.banner {
+  background: #000 url("../img/ban1_par.jpg") 50% 50%;
+  min-height: 700px;
+}
+
+.banner-text {
+  color: #ffffff;
+}
+
+.banner-container {
+  min-height: inherit;
+}
+
+.banner-container .row {
+  min-height: inherit;
+}
+
+.banner-container .row .col {
+  flex-grow: 0;
+}
+
+.banner-text {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 0;
+}
+
+.banner-text-small {
+  font-size: 30px;
+}
+
+.banner-text-small-2 {
+  font-size: 1.65vw;
+  line-height: 2;
+}
+
+.banner-text-big {
+  display: flex;
+  align-items: center;
+  font-size: 12.5vw;
+  font-weight: bold;
+}
+
+.banner-text-big-column {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-text-big-column span {
+  font-size: 28px;
+  line-height: .9;
+  letter-spacing: 7px;
+}
+
+.banner-text-big-column span:first-child {
+  font-size: 10vw;
+  line-height: 9.3vw;
+}
+
 /*==========  user style  ==========*/
+/*==========  anomation  ==========*/
+@keyframes hvr-push {
+  50% {
+    transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+/*==========  anomation  ==========*/
 /*==========  Desktop First  ==========*/
 /*==========  Mobile First  ==========*/

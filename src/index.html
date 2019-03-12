@@ -50,45 +50,336 @@
       </div>
     </div>
   </header>
-<main>
-  <div class="skitter skitter-large  with-dots">
-  <ul>
-    <li>
-      <a href="#cut">
-        <img src="img/slide2.jpg" class="cut" />
-      </a>
-      <div class="label_text">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          <a href="#see-more" class="btn btn-xs btn-warning">See more</a>
-        </p>
+  <main>
+    <div class="slider">
+      <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1920px;height:700px;overflow:hidden;visibility:hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" class="jssorl-004-double-tail-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+          <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/double-tail-spin.svg" />
+        </div>
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1920px;height:700px;overflow:hidden;">
+          <div data-fillmode="4">
+            <img data-u="image" src="img/slide1.jpg" />
+            <img data-t="0" style="position:absolute;top:55px;left:0px;width:473px;height:630px;max-width:473px;" src="img/slide1-1.png" />
+          </div>
+          <div>
+            <img data-u="image" src="img/slide2.jpg" />
+          </div>
+          <div>
+            <img data-u="image" src="img/slide3.jpg" />
+          </div>
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb031" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1"
+          data-scale="0.5" data-scale-bottom="0.75">
+          <div data-u="prototype" class="i" style="width:16px;height:16px;">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+              <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+            </svg>
+          </div>
+        </div>
+        <!-- Arrow Navigator -->
+        <div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2"
+          data-scale="0.75" data-scale-left="0.75">
+          <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+            <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+          </svg>
+        </div>
+        <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2"
+          data-scale="0.75" data-scale-right="0.75">
+          <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+            <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+          </svg>
+        </div>
       </div>
-    </li>
-    <li>
-      <a href="#swapBlocks">
-        <img src="img/slide2.jpg" class="swapBlocks" />
-      </a>
-      <div class="label_text">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          <a href="#see-more" class="btn btn-xs btn-warning">See more</a>
-        </p>
+    </div>
+
+    <section class="product-category">
+      <div class="container">
+        <div class="row flex-wrap">
+          <div class="col-4">
+            <div class="product-category__inner">
+              <a href="#">
+                <h2>Протеин</h2>
+              </a>
+              <div class="product-category__item">
+                <ul class="product_subcategory">
+                  <li><a href="">Вегетарианский</a></li>
+                  <li><a href="">Изолят</a></li>
+                  <li><a href="">Казеиновый</a></li>
+                  <li><a href="">Многокомпонентный</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 align-content-center">
+            <div class="product-category__inner">
+              <a href="#">
+                <h2>Креатин</h2>
+              </a>
+              <div class="product-category__item">
+                <ul class="product_subcategory">
+                  <li><a href="">Креатин моногидрат</a></li>
+                  <li><a href="">Креатин с траспортной системой</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="product-category__inner">
+              <a href="#">
+                <h2>Витамины и миниралы</h2>
+              </a>
+              <div class="product-category__item">
+                <ul class="product_subcategory">
+                  <li><a href="">Витаминно-миниральные комплексы</a></li>
+                  <li><a href="">Изотоники</a></li>
+                  <li><a href="">Отдельные витамины и миниралы</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="product-category__inner">
+              <a href="#">
+                <h2>Активное долголетие</h2>
+              </a>
+              <div class="product-category__item">
+                <ul class="product_subcategory">
+                  <li><a href="">CLA</a></li>
+                  <li><a href="">Q-10</a></li>
+                  <li><a href="">Антиоксиданты</a></li>
+                  <li><a href="">Жирные кислоты (Омега 3, 6, 9)</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 align-content-center">
+            <div class="product-category__inner">
+              <a href="#">
+                <h2>Аминокислоты</h2>
+              </a>
+              <div class="product-category__item">
+                <ul class="product_subcategory">
+                  <li><a href="">BCAA</a></li>
+                  <li><a href="">Аминокислоты комплексные</a></li>
+                  <li><a href="">Глютамин</a></li>
+                  <li><a href="">Отдельные аминокислоты</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="product-category__inner">
+              <a href="#">
+                <h2>Спортиные батончики</h2>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </li>
-    <li>
-      <a href="#swapBarsBack">
-        <img src="img/slide2.jpg" class="swapBarsBack" />
-      </a>
-      <div class="label_text">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          <a href="#see-more" class="btn btn-xs btn-warning">See more</a>
-        </p>
+    </section>
+
+    <section class="brands">
+      <div class="container">
+        <div class="row owl-carousel owl-carousel-1">
+          <div class="col"><a href=""><img src="img/brands/brand1.png" alt=""></a></div>
+          <div class="col"><a href=""><img src="img/brands/brand2.png" alt=""></a></div>
+          <div class="col"><a href=""><img src="img/brands/brand3.png" alt=""></a></div>
+          <div class="col"><a href=""><img src="img/brands/brand4.png" alt=""></a></div>
+          <div class="col"><a href=""><img src="img/brands/brand5.png" alt=""></a></div>
+          <div class="col"><a href=""><img src="img/brands/brand6.png" alt=""></a></div>
+          <div class="col"><a href=""><img src="img/brands/brand7.png" alt=""></a></div>
+          <div class="col"><a href=""><img src="img/brands/brand8.png" alt=""></a></div>
+        </div>
       </div>
-    </li>
-  </ul>
-</div>
-</main>
+    </section>
+
+    <section class="products featured-products">
+      <div class="container">
+        <h2>Последние поступления</h2>
+        <div class="row owl-carousel-2 owl-carousel">
+          <div class="col">
+            <div class="product-inner">
+              <a href="">
+                <figure><img src="img/product1.png" alt=""></figure>
+              </a>
+              <div class="product-item-wrap">
+                <strong class="product-name"><a href="">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit
+                    amet consectetur </a></strong>
+                <div class="price">&#8381; 1000.00</div>
+              </div>
+              <button class="view">Подробнее</button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-inner">
+              <a href="">
+                <figure><img src="img/product2.png" alt=""></figure>
+              </a>
+              <div class="product-item-wrap">
+                <strong class="product-name"><a href="">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit
+                    amet consectetur </a></strong>
+                <div class="price">&#8381; 1000.00</div>
+              </div>
+              <button class="view">Подробнее</button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-inner">
+              <a href="">
+                <figure><img src="img/product3.png" alt=""></figure>
+              </a>
+              <div class="product-item-wrap">
+                <strong class="product-name"><a href="">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit
+                    amet consectetur </a></strong>
+                <div class="price">&#8381; 1000.00</div>
+              </div>
+              <button class="view">Подробнее</button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-inner">
+              <a href="">
+                <figure><img src="img/product4.png" alt=""></figure>
+              </a>
+              <div class="product-item-wrap">
+                <strong class="product-name"><a href="">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit
+                    amet consectetur </a></strong>
+                <div class="price">&#8381; 1000.00</div>
+              </div>
+              <button class="view">Подробнее</button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-inner">
+              <a href="">
+                <figure><img src="img/product5.png" alt=""></figure>
+              </a>
+              <div class="product-item-wrap">
+                <strong class="product-name"><a href="">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit
+                    amet consectetur </a></strong>
+                <div class="price">&#8381; 1000.00</div>
+              </div>
+              <button class="view">Подробнее</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner">
+      <div class="container banner-container">
+        <div class="row align-items-center">
+          <div class="col">
+            <div class="banner-text">
+              <span class="banner-text-small">Три товара по цене двух+</span>
+              <div class="banner-text-big">
+                <span>50</span>
+                <div class="banner-text-big-column">
+                  <span>%</span>
+                  <span>скидка</span>
+                </div>
+              </div>
+              <span class="banner-text-small-2">Выгодное предложение!</span>
+            </div>
+            <button class="view view-banner">Подробнее</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products">
+        <div class="container">
+          <h2>Специальное предложение</h2>
+          <div class="row owl-carousel-2 owl-carousel">
+            <div class="col">
+              <div class="product-inner">
+                <a href="">
+                  <figure><img src="img/product1.png" alt=""></figure>
+                </a>
+                <div class="product-item-wrap">
+                  <strong class="product-name"><a href="">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit
+                      amet consectetur </a></strong>
+                  <div class="price">&#8381; 1000.00</div>
+                </div>
+                <button class="view">Подробнее</button>
+              </div>
+            </div>
+            <div class="col">
+              <div class="product-inner">
+                <a href="">
+                  <figure><img src="img/product2.png" alt=""></figure>
+                </a>
+                <div class="product-item-wrap">
+                  <strong class="product-name"><a href="">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit
+                      amet consectetur </a></strong>
+                  <div class="price">&#8381; 1000.00</div>
+                </div>
+                <button class="view">Подробнее</button>
+              </div>
+            </div>
+            <div class="col">
+              <div class="product-inner">
+                <a href="">
+                  <figure><img src="img/product3.png" alt=""></figure>
+                </a>
+                <div class="product-item-wrap">
+                  <strong class="product-name"><a href="">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit
+                      amet consectetur </a></strong>
+                  <div class="price">&#8381; 1000.00</div>
+                </div>
+                <button class="view">Подробнее</button>
+              </div>
+            </div>
+            <div class="col">
+              <div class="product-inner">
+                <a href="">
+                  <figure><img src="img/product4.png" alt=""></figure>
+                </a>
+                <div class="product-item-wrap">
+                  <strong class="product-name"><a href="">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit
+                      amet consectetur </a></strong>
+                  <div class="price">&#8381; 1000.00</div>
+                </div>
+                <button class="view">Подробнее</button>
+              </div>
+            </div>
+            <div class="col">
+              <div class="product-inner">
+                <a href="">
+                  <figure><img src="img/product5.png" alt=""></figure>
+                </a>
+                <div class="product-item-wrap">
+                  <strong class="product-name"><a href="">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit
+                      amet consectetur </a></strong>
+                  <div class="price">&#8381; 1000.00</div>
+                </div>
+                <button class="view">Подробнее</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+  </main>
 
   <script src="js/scripts.min.js"></script>
 </body>

@@ -1,8 +1,29 @@
 @import "vars"
 @import "fonts"
 @import "libs"
+@import "../libs/slider/scss/style.scss"
 
 /*==========  user style  ==========*/
+button.view
+  background-color: #e52714
+  border: none
+  color: #ffffff
+  padding: 20px 30px
+  border-radius: 3px
+  text-transform: uppercase
+  font-weight: bold
+  cursor: pointer
+  &-banner
+    margin-top: 15px
+  &:hover
+    background-color: #333333
+    animation: hvr-push .4s
+
+.container
+  & > h2
+    text-transform: uppercase
+    margin-bottom: 50px
+
 a:hover
   text-decoration: none
   z-index: 9999
@@ -95,7 +116,145 @@ a:hover
       transition: .5s
       &:hover
         color: #ff2817
-      //padding: 10px
+
+
+.product-category
+  margin: 30px 0
+  &__inner
+    background: #000 url('../img/cat1.jpg') no-repeat 100% 50%
+    min-height: 250px
+    display: flex
+    justify-content: center
+    flex-direction: column
+    padding: 20px 35px
+    margin: 15px 0
+    h2
+      text-transform: uppercase
+      color: #ffffff
+      letter-spacing: 1px
+      &:hover
+        color: #e52714
+    &:hover .product_subcategory
+      display: block
+      opacity: 1
+  &__item
+    .product_subcategory
+      padding: 0
+      margin: 0S
+      list-style: none
+      opacity: 0
+      transition: .5s
+      display: none
+      li
+        position: relative
+        padding-left: 20px
+        &::before
+          content: ''
+          position: absolute
+          width: 7px
+          height: 7px
+          border-radius: 50%
+          background: #e52714
+          left: 0
+          top: 50%
+          transform: translateY(-50%)
+      a
+        color: #595959
+        &:hover
+          color: #ffffff
+
+.brands
+  margin-top: 30px
+  .owl-carousel
+    img
+      opacity: .15
+      transition: 1s
+    .col:hover img
+      transform: rotate3d(0,1,0,-360deg)
+      opacity: 1
+.products,
+.featured-products
+  margin: 70px 0
+.product-inner
+  figure
+    padding: 30px
+  .product-item-wrap
+    display: flex
+    justify-content: space-between
+    margin-bottom: 15px
+    .product-name
+      font-weight: normal
+      text-transform: uppercase
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      padding-right: 10px
+      a
+        color: #333333
+        &:hover
+          color: #e52714
+    .price
+      white-space: nowrap
+      font-weight: bold
+      font-size: 18px
+
+.banner
+  background: #000 url('../img/ban1_par.jpg') 50% 50%
+  min-height: 700px
+  &-text
+    color: #ffffff
+  &-container
+    min-height: inherit
+    .row
+      min-height: inherit
+      .col
+        flex-grow: 0
+  &-text
+    text-transform: uppercase
+    letter-spacing: 1px
+    line-height: 0
+    &-small
+      font-size: 30px
+      &-2
+        font-size: 1.65vw
+        line-height: 2
+    &-big
+      display: flex
+      align-items: center
+      & > span
+      font-size: 12.5vw
+      font-weight: bold
+      &-column
+        font-size: 16px
+        display: flex
+        flex-direction: column
+        span
+          font-size: 28px
+          line-height: .9
+          letter-spacing: 7px
+        span:first-child
+          font-size: 10vw
+          line-height: 9.3vw
+          
+      
 /*==========  user style  ==========*/
 
+
+/*==========  anomation  ==========*/
+=keyframes($animation-name)
+  @-webkit-keyframes #{$animation-name}
+    @content
+  @-moz-keyframes #{$animation-name}
+    @content
+  @keyframes #{$animation-name}
+    @content
+
+@keyframes hvr-push
+  50%
+    transform: scale(0.8)
+    transform: scale(0.8)
+  100%
+    transform: scale(1)
+    transform: scale(1)
+/*==========  anomation  ==========*/
 @import "media" // Always at the end
