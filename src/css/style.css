@@ -6607,6 +6607,7 @@ a:hover {
   color: white;
   margin: 0 0px 0 10px;
   margin-right: 20px;
+  text-transform: uppercase;
 }
 
 .logo-description span:last-of-type {
@@ -6878,6 +6879,7 @@ a:hover {
 .sale-bg {
   filter: grayscale(1) blur(0.5px);
   transition: .2s;
+  border-radius: 7px;
 }
 
 .sale-item__inner {
@@ -6925,14 +6927,14 @@ a:hover {
 .sale-item-img {
   position: absolute;
   z-index: 5;
-  right: -70px;
-  bottom: -90px;
+  right: -65px;
+  bottom: -80px;
   transform: scale(0.65);
   transition: .2s;
 }
 
 .info-useful {
-  margin: 40px 0;
+  margin: 100px 0;
   background: #000 url("../img/ingo-bg.jpg") no-repeat 50% 0%;
   background-size: cover;
   color: #ffffff;
@@ -6969,9 +6971,127 @@ a:hover {
   z-index: 2;
 }
 
-.info-useful-text p {
+.info-useful-text ul {
+  margin: 0;
+  padding: 0 15px;
+}
+
+.info-useful-text li {
+  color: #e52714;
+}
+
+.info-useful-text li span {
+  color: #ffffff;
   line-height: 1.7em;
   font-size: 18px;
+}
+
+.info-useful-text p {
+  color: #ffffff;
+  line-height: 1.7em;
+  font-size: 18px;
+}
+
+.info-program {
+  margin-bottom: 100px;
+  border-radius: 5px;
+}
+
+.info-program a {
+  display: block;
+}
+
+.info-program .row {
+  filter: drop-shadow(-12px 20px 20px rgba(0, 0, 0, 0.37));
+}
+
+.info-program .row div:nth-child(1) .info-program-inner {
+  border-top-left-radius: 10px;
+}
+
+.info-program .row div:nth-child(3) .info-program-inner {
+  border-top-right-radius: 10px;
+}
+
+.info-program .row div:nth-child(4) .info-program-inner {
+  border-bottom-left-radius: 10px;
+}
+
+.info-program .row div:nth-child(6) .info-program-inner {
+  border-bottom-right-radius: 10px;
+}
+
+.info-program-inner {
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  min-height: 400px;
+  box-shadow: inset 0 0 160px 100px rgba(0, 0, 0, 0.55);
+  background-size: cover;
+  position: relative;
+  transition: transform .2s, box-shadow 8s;
+  padding: 50px;
+}
+
+.info-program-inner:hover {
+  transform: scale(1.1);
+  border-radius: 5px;
+  z-index: 88;
+  box-shadow: 0 0 50px 0 #000;
+}
+
+.info-program-bg-2 {
+  background-image: url("../img/info-category2.jpg");
+}
+
+.info-program-bg-3 {
+  background-image: url("../img/info-category3.jpg");
+}
+
+.info-program-bg-4 {
+  background-image: url("../img/info-category4.jpg");
+}
+
+.info-program-bg-5 {
+  background-image: url("../img/info-category5.jpg");
+}
+
+.info-program-bg-6 {
+  background-image: url("../img/info-category6.jpg");
+}
+
+.info-program-text {
+  padding: 50px 30px 0;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.info-program-description {
+  margin: 0;
+  font-size: 1.7em;
+}
+
+.info-program-number {
+  font-size: 6em;
+  line-height: 1;
+  font-weight: bold;
+  position: relative;
+}
+
+.info-program-number::before {
+  content: '#';
+  font-weight: 300;
+}
+
+.footer-page {
+  background-color: #131212;
+  padding: 60px 0;
+}
+
+.copyright {
+  background-color: #161616;
+  color: #7d7d7d;
+  padding: 20px 0 10px;
 }
 
 /*==========  user style  ==========*/
