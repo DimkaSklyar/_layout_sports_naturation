@@ -18,12 +18,14 @@ button.view
   &:hover
     background-color: #333333
     animation: hvr-push .4s
+button.btn-form
+  padding: 20px 60px
 
 .container
   & > h2
     text-transform: uppercase
     margin-bottom: 50px
-
+    position: relative
 a:hover
   text-decoration: none
   z-index: 9999
@@ -120,32 +122,55 @@ a:hover
 
 
 .product-category
-  margin: 30px 0
+  margin: 100px 0
+  @for $i from 1 through 6
+    &-bg-#{$i}
+      background-image: url('../img/cat#{$i}.jpg')
+      background-size: cover
+      background-repeat: no-repeat
   &__inner
-    background: #000 url('../img/cat1.jpg') no-repeat 100% 50%
-    min-height: 250px
+    min-height: 300px
     display: flex
     justify-content: center
     flex-direction: column
     padding: 20px 35px
     margin: 15px 0
+    background-size: cover
+    border-radius: 7px
+    position: relative
+    &:before
+      z-index: 2
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 31%, rgba(0,212,255,0) 100%)
+      border-radius: 7px
+    &:hover .product-category__item
+      max-height: 60px
+      opacity: 1
     h2
       text-transform: uppercase
       color: #ffffff
       letter-spacing: 1px
+      position: relative
+      z-index: 99
       &:hover
         color: #e52714
-    &:hover .product_subcategory
-      display: block
-      opacity: 1
   &__item
+    max-height: 0
+    opacity: 0
+    transition: .3s
+    position: relative
+    z-index: 99
     .product_subcategory
       padding: 0
-      margin: 0S
+      margin: 0
       list-style: none
-      opacity: 0
+      opacity: 1
       transition: .5s
-      display: none
       li
         position: relative
         padding-left: 20px
@@ -163,6 +188,9 @@ a:hover
         color: #595959
         &:hover
           color: #ffffff
+    .product_subcategory-visible
+      display: block
+      opacity: 1
 
 .brands
   margin-top: 30px
@@ -173,12 +201,37 @@ a:hover
     .col:hover img
       transform: rotate3d(0,1,0,-360deg)
       opacity: 1
+.owl-carousel-2
+  position: relative
+  .owl-nav
+    position: absolute
+    top: 0
+    right: 0
 .products,
 .featured-products
   margin: 70px 0
+  .container
+    position: relative
+    .carousel-nav
+      position: absolute
+      top: 0
+      right: 2%
+      a
+        display: inline-block
+        font-size: 2.5em
+        color: #777
+        transition: .3s
+        &:hover
+          color: #e52714
+        &:last-child
+          margin-left: 15px
 .product-inner
   figure
     padding: 30px
+    img
+      transition: .3s
+    &:hover img
+      transform: scale(1.1)
   .product-item-wrap
     display: flex
     justify-content: space-between
@@ -198,12 +251,17 @@ a:hover
       white-space: nowrap
       font-weight: bold
       font-size: 18px
-
+.slider-text-small-2
+  font-size: 1.9vw
+  line-height: 2
+.slider-text-small
+  font-size: 2vw
 .banner
   background: #000 url('../img/ban1_par.jpg') 50% 50%
   min-height: 700px
   &-text
     color: #ffffff
+    text-align: left
   &-container
     min-height: inherit
     .row
@@ -215,7 +273,7 @@ a:hover
     letter-spacing: 1px
     line-height: 0
     &-small
-      font-size: 30px
+      font-size: 1.6vw
       &-2
         font-size: 1.65vw
         line-height: 2
@@ -226,7 +284,7 @@ a:hover
       font-size: 12.5vw
       font-weight: bold
       &-column
-        font-size: 16px
+        font-size: 1.5vw
         display: flex
         flex-direction: column
         span
@@ -238,6 +296,7 @@ a:hover
           line-height: 9.3vw
           
 .sale
+  margin-bottom: 100px
   &-bg
     filter: grayscale(1) blur(.5px)
     transition: .2s
@@ -298,10 +357,11 @@ a:hover
     z-index: 0
   h2,
   h3
-    color: #e52714
     z-index: 2
     position: relative
     text-transform: uppercase
+  h2
+    color: #e52714
   h3
     margin-bottom: 20px
 .info-useful-text
@@ -313,11 +373,11 @@ a:hover
   li
     color: #e52714
     span
-      color: #ffffff
+      color: #cecece
       line-height: 1.7em
       font-size: 18px
   p
-    color: #ffffff
+    color: #cecece
     line-height: 1.7em
     font-size: 18px
 
@@ -374,11 +434,93 @@ a:hover
 .footer-page
   background-color: #131212
   padding: 60px 0
+  color: #777777
+  .about-company
+    line-height: 1.7
+  h3
+    text-transform: uppercase
+    font-weight: normal
+    color: #e4e4e4
+  span
+    color: #ffffff
+    position: relative
+  .footer-navigation
+    padding-left: 60px
+    li
+      line-height: 2
+    a
+      color: #777777
+  ul
+    list-style: none
+    padding: 0
+    margin: 0
+  .footer-contacts
+    .fa
+      font-size: 1.5em
+      color: #e52714
+      margin-right: 10px
+
+.message-form
+  width: 100%
+  position: relative
+  flex-grow: 1
+  label
+    position: absolute
+    top: 10px
+#question-form
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  margin-bottom: 20px
+  textarea
+    outline: none 0
+    &:focus + label
+      top: -5%
+      font-size: .7em
+  fieldset
+    width: 48%
+    position: relative
+  label
+    position: absolute
+    bottom: 15px
+    left: 10px
+    transition: .3s
+  input
+    background: none
+    border: none
+    border-bottom: 2px solid #777777
+    margin-bottom: 20px
+    padding: 10px
+    width: 100%
+    color: #ffffff
+    &:focus
+      outline: none 0
+    &:focus + label
+      bottom: 73%
+      font-size: .7em
+  .input-not-empty
+    bottom: 73%
+    font-size: .7em
+  .area-not-empty
+    top: -5%
+    font-size: .7em
+  textarea
+    background: none
+    border: none
+    border-bottom: 2px solid #777777
+    padding: 10px
+    width: 100%
+    color: #ffffff
+#messegeResult-question
+  text-align: center
+  #submit-form-question
+    width: 100%
 
 .copyright
   background-color: #161616
   color: #7d7d7d
   padding: 20px 0 10px
+
 /*==========  user style  ==========*/
 
 
