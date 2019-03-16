@@ -85,6 +85,12 @@ a:hover
       text-transform: uppercase
       margin-right: 15px
       padding: 15px
+      +media-breakpoint-down(xl)
+        margin-right: 5px
+        padding: 10px
+      +media-breakpoint-down(lg)
+        font-size: 14px
+        padding: 5px
       a
         display: block
         color: white
@@ -93,6 +99,9 @@ a:hover
           color: #ff2817 
 
 .top-contact
+  +media-breakpoint-down(xl)
+    flex-direction: column
+    align-items: flex-start
   &__social
     list-style: none
     margin: 0
@@ -113,6 +122,9 @@ a:hover
     font-size: 1.5em
     margin-right: 5px
     color: white
+    white-space: nowrap
+    +media-breakpoint-down(xl)
+      font-size: 1em
     a
       color: white
       letter-spacing: 2px
@@ -257,8 +269,13 @@ a:hover
 .slider-text-small
   font-size: 2vw
 .banner
-  background: #000 url('../img/ban1_par.jpg') 50% 50%
+  background: #000 url('../img/ban1_par.jpg') 0% 50%
   min-height: 700px
+  background-size: cover
+  +media-breakpoint-down(xl)
+    min-height: 550px
+  +media-breakpoint-down(lg)
+    min-height: 450px
   &-text
     color: #ffffff
     text-align: left
@@ -288,7 +305,7 @@ a:hover
         display: flex
         flex-direction: column
         span
-          font-size: 28px
+          font-size: 1.5vw
           line-height: .9
           letter-spacing: 7px
         span:first-child
@@ -307,6 +324,11 @@ a:hover
       transform: scale(.85)
     &:hover .sale-bg
       filter: none
+    .sale-bg:first-child
+      width: 100%
+    +media-breakpoint-down(xl)
+      &:hover .sale-item-img
+        transform: scale(.65)
   &-item-text
     position: absolute  
     top: 50%
@@ -321,10 +343,16 @@ a:hover
       line-height: 50px
       letter-spacing: 12px
       font-weight: bold
+      +media-breakpoint-down(xl)
+        font-size: 30px
+        line-height: 25px
     strong
       color: #e52714
-      font-size: 6vw
-      line-height: 6vw
+      font-size: 120px
+      line-height: 120px
+      +media-breakpoint-down(xl)
+        font-size: 80px
+        line-height: 70px
     p
       color: #595959
       line-height: 1.2
@@ -336,6 +364,14 @@ a:hover
     bottom: -80px
     transform: scale(.65)
     transition: .2s
+    +media-breakpoint-down(xl)
+      transform: scale(.5)
+      top: -20px
+      right: -110px
+    +media-breakpoint-down(lg)
+      transform: scale(.45)
+      top: -60px
+      left: 33%
 
 
 .info-useful
@@ -407,6 +443,10 @@ a:hover
     position: relative
     transition: transform .2s, box-shadow 8s
     padding: 50px
+    +media-breakpoint-down(xl)
+      padding: 25px
+    +media-breakpoint-down(lg)
+      padding: 15px
     &:hover
       transform: scale(1.1)
       border-radius: 5px
@@ -415,6 +455,8 @@ a:hover
   @for $i from 2 through 6
     &-bg-#{$i}
       background-image: url('../img/info-category#{$i}.jpg')
+      +media-breakpoint-down(lg)
+        padding-top: 40px
   &-text
     padding: 50px 30px 0
     color: #ffffff
@@ -422,6 +464,8 @@ a:hover
   &-description
     margin: 0
     font-size: 1.7em
+    +media-breakpoint-down(lg)
+      font-size: 1.5em
   &-number
     font-size: 6em
     line-height: 1
@@ -437,6 +481,13 @@ a:hover
   color: #777777
   .about-company
     line-height: 1.7
+    +media-breakpoint-down(lg)
+      overflow: hidden
+      text-overflow: ellipsis
+      -webkit-line-clamp: 12
+      -webkit-box-orient: vertical
+      display: -webkit-box
+      height: 320px
   h3
     text-transform: uppercase
     font-weight: normal
