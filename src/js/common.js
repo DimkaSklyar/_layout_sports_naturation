@@ -3,15 +3,64 @@ $(document).ready(function () {
     $(".owl-carousel-1").owlCarousel({
         items: 8,
         loop: true,
-        nav: true
+        responsiveClass: false,
+        responsive:{
+          0:{
+              items: 1,
+          },
+          750:{
+            items: 3,
+          },
+          1000:{
+              items: 5,
+              loop: true
+          },
+          1200:{
+            items: 8,
+            loop: true
+          }
+        }
     });
 
     var owl = $(".owl-carousel-2").owlCarousel({
-        items: 4
+        items: 4,
+        responsiveClass: true,
+        responsive:{
+          0:{
+              items: 1
+          },
+          750:{
+            items: 3
+          },
+          1000:{
+              items: 3,
+              loop: true
+          },
+          1200:{
+            items: 4,
+            loop: true
+          }
+        }
     });
 
     var owl2 = $(".owl-carousel-3").owlCarousel({
-      items: 4
+      items: 4,
+      responsive:{
+        0:{
+            items: 1
+        },
+        750:{
+          items: 3
+        },
+        1000:{
+            items: 3,
+            loop: true
+        },
+        1200:{
+          items: 4,
+          loop: true
+        }
+      }
   });
 
     $('.team-next').click(function() {
@@ -29,6 +78,26 @@ $(document).ready(function () {
     $('.team-prev-2').click(function() {
         owl2.trigger('prev.owl.carousel');
     });
+
+
+    var touch = $('#touch-menu');
+    var menu = $('.top-navigation');
+
+    $(touch).on('click', function(e) {
+        e.preventDefault();
+        menu.slideToggle();
+    });
+    $(window).resize(function() {
+        var w = $(window).width();
+        if (w > 760 && menu.is(':hidden')) {
+            menu.removeAttr('style');
+        }
+    });
+
+    $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function() {
+        $(this).toggleClass('open');
+    });
+
 
     $('input').change(function() {
       if ($(this).val() !== "") {
