@@ -345,17 +345,11 @@ a:hover
   &-item__inner
     position: relative
     &:hover .sale-item-img
-      transform: scale(.85)
+      transform: scale(1)
     &:hover .sale-bg
       filter: none
     .sale-bg:first-child
       width: 100%
-    +media-breakpoint-down(xl)
-      &:hover .sale-item-img
-        transform: scale(.65)
-    +media-breakpoint-down(md)
-      &:hover .sale-item-img
-        transform: scale(.50)
   &-item-text
     position: absolute  
     top: 50%
@@ -387,27 +381,11 @@ a:hover
   &-item-img
     position: absolute
     z-index: 5
-    right: -65px
-    bottom: -80px
-    transform: scale(.65)
+    right: -30px
+    bottom: -40px
+    transform: scale(.8)
     transition: .2s
-    +media-breakpoint-down(xl)
-      transform: scale(.5)
-      top: -20px
-      right: -110px
-    +media-breakpoint-down(lg)
-      transform: scale(.45)
-      top: -60px
-      left: 33%
-    +media-breakpoint-down(md)
-      transform: scale(.35)
-      top: -85px
-      left: 25%
-    +media-breakpoint-down(sm)
-      left: 40%
-      top: -5%
-      transform: scale(.65)
-      transition: .2s
+    max-height: 100%
 
 .info-useful
   margin: 100px 0

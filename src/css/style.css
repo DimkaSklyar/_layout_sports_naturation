@@ -10014,7 +10014,7 @@ a:hover {
 }
 
 .sale-item__inner:hover .sale-item-img {
-  transform: scale(0.85);
+  transform: scale(1);
 }
 
 .sale-item__inner:hover .sale-bg {
@@ -10023,18 +10023,6 @@ a:hover {
 
 .sale-item__inner .sale-bg:first-child {
   width: 100%;
-}
-
-@media (max-width: 1798px) {
-  .sale-item__inner:hover .sale-item-img {
-    transform: scale(0.65);
-  }
-}
-
-@media (max-width: 1199px) {
-  .sale-item__inner:hover .sale-item-img {
-    transform: scale(0.5);
-  }
 }
 
 .sale-item-text {
@@ -10084,43 +10072,11 @@ a:hover {
 .sale-item-img {
   position: absolute;
   z-index: 5;
-  right: -65px;
-  bottom: -80px;
-  transform: scale(0.65);
+  right: -30px;
+  bottom: -40px;
+  transform: scale(0.8);
   transition: .2s;
-}
-
-@media (max-width: 1798px) {
-  .sale-item-img {
-    transform: scale(0.5);
-    top: -20px;
-    right: -110px;
-  }
-}
-
-@media (max-width: 1399px) {
-  .sale-item-img {
-    transform: scale(0.45);
-    top: -60px;
-    left: 33%;
-  }
-}
-
-@media (max-width: 1199px) {
-  .sale-item-img {
-    transform: scale(0.35);
-    top: -85px;
-    left: 25%;
-  }
-}
-
-@media (max-width: 991px) {
-  .sale-item-img {
-    left: 40%;
-    top: -5%;
-    transform: scale(0.65);
-    transition: .2s;
-  }
+  max-height: 100%;
 }
 
 .info-useful {
