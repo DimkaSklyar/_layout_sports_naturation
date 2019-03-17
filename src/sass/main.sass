@@ -442,10 +442,19 @@ a:hover
       border-top-left-radius: 10px
     div:nth-child(3) .info-program-inner
       border-top-right-radius: 10px
+      +media-breakpoint-down(sm)
+        border-top-right-radius: 0
     div:nth-child(4) .info-program-inner
       border-bottom-left-radius: 10px
+      +media-breakpoint-down(sm)
+        border-bottom-left-radius: 0
     div:nth-child(6) .info-program-inner
       border-bottom-right-radius: 10px
+    +media-breakpoint-down(sm)
+      div:nth-child(2) .info-program-inner
+        border-top-right-radius: 10px
+      div:nth-child(5) .info-program-inner
+        border-bottom-left-radius: 10px
   &-inner
     background-color: #000
     background-repeat: no-repeat
