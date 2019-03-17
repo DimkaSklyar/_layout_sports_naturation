@@ -473,6 +473,9 @@ a:hover
       min-height: 350px
     +media-breakpoint-down(md)
       min-height: 300px
+    +media-breakpoint-down(xs)
+      border-radius: 10px
+      margin-bottom: 10px
     &:hover
       transform: scale(1.1)
       border-radius: 5px
@@ -529,6 +532,8 @@ a:hover
     position: relative
   .footer-navigation
     padding-left: 60px
+    +media-breakpoint-down(sm)
+      padding-left: 15px
     li
       line-height: 2
     a

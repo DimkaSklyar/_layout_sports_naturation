@@ -10228,6 +10228,13 @@ a:hover {
   }
 }
 
+@media (max-width: 767px) {
+  .info-program-inner {
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+}
+
 .info-program-inner:hover {
   transform: scale(1.1);
   border-radius: 5px;
@@ -10366,6 +10373,12 @@ a:hover {
 
 .footer-page .footer-navigation {
   padding-left: 60px;
+}
+
+@media (max-width: 991px) {
+  .footer-page .footer-navigation {
+    padding-left: 15px;
+  }
 }
 
 .footer-page .footer-navigation li {
