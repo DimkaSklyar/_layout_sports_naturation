@@ -9916,13 +9916,45 @@ a:hover {
   font-size: 18px;
 }
 
+.slider-text-small {
+  font-size: .85em;
+}
+
 .slider-text-small-2 {
-  font-size: 1.9vw;
+  font-size: .8em;
   line-height: 2;
 }
 
-.slider-text-small {
-  font-size: 2vw;
+.slider-text {
+  color: #ffffff;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 0;
+}
+
+.slider-text-big {
+  display: flex;
+  align-items: center;
+  font-size: 5em;
+  font-weight: bold;
+}
+
+.slider-text-big-column {
+  font-size: .1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider-text-big-column span {
+  font-size: 1.4em;
+  line-height: 0;
+  letter-spacing: 7px;
+}
+
+.slider-text-big-column span:first-child {
+  font-size: 9em;
+  line-height: 1;
 }
 
 .banner {
@@ -10207,17 +10239,13 @@ a:hover {
 @media (max-width: 1798px) {
   .info-program-inner {
     padding: 25px;
+    min-height: 400px;
   }
 }
 
 @media (max-width: 1399px) {
   .info-program-inner {
     padding: 15px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .info-program-inner {
     min-height: 350px;
   }
 }

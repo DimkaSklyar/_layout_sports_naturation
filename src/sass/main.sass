@@ -287,11 +287,34 @@ a:hover
       white-space: nowrap
       font-weight: bold
       font-size: 18px
-.slider-text-small-2
-  font-size: 1.9vw
-  line-height: 2
 .slider-text-small
-  font-size: 2vw
+  font-size: .85em
+  &-2
+    font-size: .8em
+    line-height: 2
+.slider-text
+  color: #ffffff
+  text-align: left
+  text-transform: uppercase
+  letter-spacing: 1px
+  line-height: 0
+  &-big
+    display: flex
+    align-items: center
+    & > span
+    font-size: 5em
+    font-weight: bold
+    &-column
+      font-size: .1em
+      display: flex
+      flex-direction: column
+      span
+        font-size: 1.4em
+        line-height: 0
+        letter-spacing: 7px
+      span:first-child
+        font-size: 9em
+        line-height: 1
 .banner
   background: #000 url('../img/ban1_par.jpg') 0% 50%
   min-height: 700px
@@ -448,6 +471,7 @@ a:hover
       border-bottom-left-radius: 10px
       +media-breakpoint-down(sm)
         border-bottom-left-radius: 0
+      
     div:nth-child(6) .info-program-inner
       border-bottom-right-radius: 10px
     +media-breakpoint-down(sm)
@@ -467,9 +491,9 @@ a:hover
     padding: 50px
     +media-breakpoint-down(xl)
       padding: 25px
+      min-height: 400px
     +media-breakpoint-down(lg)
       padding: 15px
-    +media-breakpoint-up(lg)
       min-height: 350px
     +media-breakpoint-down(md)
       min-height: 300px
