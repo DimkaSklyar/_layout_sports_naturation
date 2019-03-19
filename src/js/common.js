@@ -7,17 +7,21 @@ $(document).ready(function () {
         responsive:{
           0:{
               items: 1,
+              dots: true
           },
-          750:{
+          768:{
             items: 3,
+            dots: false
           },
           1000:{
               items: 5,
-              loop: true
+              loop: true,
+              dots: false
           },
           1200:{
             items: 8,
-            loop: true
+            loop: true,
+            dots: false
           }
         }
     });
@@ -27,18 +31,22 @@ $(document).ready(function () {
         responsiveClass: true,
         responsive:{
           0:{
-              items: 1
+              items: 1,
+              dots: true
           },
-          750:{
-            items: 3
+          768:{
+            items: 3,
+            dots: false
           },
           1000:{
               items: 3,
-              loop: true
+              loop: true,
+              dots: false
           },
           1200:{
             items: 4,
-            loop: true
+            loop: true,
+            dots: false
           }
         }
     });
@@ -47,18 +55,22 @@ $(document).ready(function () {
       items: 4,
       responsive:{
         0:{
-            items: 1
+            items: 1,
+            dots: true
         },
-        750:{
-          items: 3
+        768:{
+          items: 3,
+          dots: false
         },
         1000:{
             items: 3,
-            loop: true
+            loop: true,
+            dots: false
         },
         1200:{
           items: 4,
-          loop: true
+          loop: true,
+          dots: false
         }
       }
   });
@@ -175,6 +187,5 @@ $(document).ready(function () {
     };
 
     jssor_1_slider_init();
-
 
 });

@@ -4,7 +4,7 @@
 @import "../libs/slider/scss/style.scss"
 
 /*==========  user style  ==========*/
-button.view
+.view
   background-color: #e52714
   border: none
   color: #ffffff
@@ -15,11 +15,22 @@ button.view
   cursor: pointer
   font-size: 18px
   line-height: 1.2
+  display: inline-block
+  color: #ffffff !important
   &-banner
+    margin-top: 15px
+    +media-breakpoint-down(sm)
+      position: absolute
+      bottom: 50%
+      font-size: 1.3em
+      left: 40%
+  &-banner-main
     margin-top: 15px
   &:hover
     background-color: #333333
     animation: hvr-push .4s
+  a
+    color: #ffffff
 button.btn-form
   padding: 20px 60px
 
@@ -232,7 +243,7 @@ a:hover
   margin-top: 30px
   .owl-carousel
     img
-      opacity: .15
+      opacity: .35
       transition: 1s
     .col:hover img
       transform: rotate3d(0,1,0,-360deg)
@@ -250,7 +261,7 @@ a:hover
     position: relative
     .carousel-nav
       position: absolute
-      top: 0
+      top: 5%
       right: 2%
       a
         display: inline-block
@@ -338,6 +349,9 @@ a:hover
     line-height: 0
     &-small
       font-size: 1.6vw
+      +media-breakpoint-down(xs)
+        font-size: 4vw
+        line-height: 1.1
       &-2
         font-size: 1.65vw
         line-height: 2
@@ -358,6 +372,9 @@ a:hover
         span:first-child
           font-size: 10vw
           line-height: 9.3vw
+          +media-breakpoint-down(xs)
+            font-size: 12.5vw
+            line-height: 12vw
           
 .sale
   margin-bottom: 100px
@@ -562,6 +579,9 @@ a:hover
       line-height: 2
     a
       color: #777777
+      display: inline-block
+      &:hover
+        border-bottom: 1px solid #777777
   ul
     list-style: none
     padding: 0
@@ -660,7 +680,22 @@ a:hover
   span:nth-child(6)
     left: calc(50% - 6px)
     top: 21px
-
+.owl-dots
+  text-align: center
+  margin-top: 20px
+  .owl-dot
+    &:focus
+      outline: none 0
+    span
+      display: block
+      width: 15px
+      height: 15px
+      background-color: #ccc
+      border-radius: 50%
+      margin-left: 10px
+  .active
+    span
+      background-color: red
 /*==========  anomation  ==========*/
 =keyframes($animation-name)
   @-webkit-keyframes #{$animation-name}

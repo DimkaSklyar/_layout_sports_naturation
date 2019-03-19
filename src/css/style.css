@@ -9444,7 +9444,7 @@ html {
 }
 
 /*==========  user style  ==========*/
-button.view {
+.view {
   background-color: #e52714;
   border: none;
   color: #ffffff;
@@ -9455,15 +9455,34 @@ button.view {
   cursor: pointer;
   font-size: 18px;
   line-height: 1.2;
+  display: inline-block;
+  color: #ffffff !important;
 }
 
-button.view-banner {
+.view-banner {
   margin-top: 15px;
 }
 
-button.view:hover {
+@media (max-width: 991px) {
+  .view-banner {
+    position: absolute;
+    bottom: 50%;
+    font-size: 1.3em;
+    left: 40%;
+  }
+}
+
+.view-banner-main {
+  margin-top: 15px;
+}
+
+.view:hover {
   background-color: #333333;
   animation: hvr-push .4s;
+}
+
+.view a {
+  color: #ffffff;
 }
 
 button.btn-form {
@@ -9821,7 +9840,7 @@ a:hover {
 }
 
 .brands .owl-carousel img {
-  opacity: .15;
+  opacity: .35;
   transition: 1s;
 }
 
@@ -9853,7 +9872,7 @@ a:hover {
 .products .container .carousel-nav,
     .featured-products .container .carousel-nav {
   position: absolute;
-  top: 0;
+  top: 5%;
   right: 2%;
 }
 
@@ -10002,6 +10021,13 @@ a:hover {
   font-size: 1.6vw;
 }
 
+@media (max-width: 767px) {
+  .banner-text-small {
+    font-size: 4vw;
+    line-height: 1.1;
+  }
+}
+
 .banner-text-small-2 {
   font-size: 1.65vw;
   line-height: 2;
@@ -10029,6 +10055,13 @@ a:hover {
 .banner-text-big-column span:first-child {
   font-size: 10vw;
   line-height: 9.3vw;
+}
+
+@media (max-width: 767px) {
+  .banner-text-big-column span:first-child {
+    font-size: 12.5vw;
+    line-height: 12vw;
+  }
 }
 
 .sale {
@@ -10415,6 +10448,11 @@ a:hover {
 
 .footer-page .footer-navigation a {
   color: #777777;
+  display: inline-block;
+}
+
+.footer-page .footer-navigation a:hover {
+  border-bottom: 1px solid #777777;
 }
 
 .footer-page ul {
@@ -10557,6 +10595,28 @@ a:hover {
 #nav-icon2.open span:nth-child(6) {
   left: calc(50% - 6px);
   top: 21px;
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dots .owl-dot:focus {
+  outline: none 0;
+}
+
+.owl-dots .owl-dot span {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.owl-dots .active span {
+  background-color: red;
 }
 
 /*==========  anomation  ==========*/
