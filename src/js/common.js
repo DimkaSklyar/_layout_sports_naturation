@@ -11,6 +11,7 @@ $(document).ready(function () {
           },
           768:{
             items: 3,
+            loop: true,
             dots: false
           },
           1000:{
@@ -40,12 +41,10 @@ $(document).ready(function () {
           },
           1000:{
               items: 3,
-              loop: true,
               dots: false
           },
           1200:{
             items: 4,
-            loop: true,
             dots: false
           }
         }
@@ -64,16 +63,20 @@ $(document).ready(function () {
         },
         1000:{
             items: 3,
-            loop: true,
             dots: false
         },
         1200:{
           items: 4,
-          loop: true,
           dots: false
         }
       }
   });
+
+  var owl2 = $(".owl-carousel-4").owlCarousel({
+    items: 1,
+    dots: true,
+    loop: true
+});
 
     $('.team-next').click(function() {
         owl.trigger('next.owl.carousel');
