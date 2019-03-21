@@ -170,6 +170,27 @@ a:hover
   display: flex
   .col
     height: 100%
+.ul-decoration
+  list-style: none
+  opacity: 1
+  transition: .5s
+  margin: 0
+  padding: 0
+  margin-bottom: 10px
+  padding-left: 10px
+  li
+    position: relative
+    padding-left: 20px
+    &::before
+      content: ''
+      position: absolute
+      width: 7px
+      height: 7px
+      border-radius: 50%
+      background: #e52714
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
 
 .product-category
   margin: 100px 0
@@ -305,6 +326,8 @@ a:hover
       white-space: nowrap
       font-weight: bold
       font-size: 18px
+.product-description
+  text-align: left
 .slider-text-small
   font-size: .85em
   &-2
@@ -385,6 +408,8 @@ a:hover
           
 .sale
   margin-bottom: 100px
+  &-item
+    margin-bottom: 30px
   &-bg
     filter: grayscale(1) blur(.5px)
     transition: .2s
@@ -704,6 +729,14 @@ a:hover
     span
       background-color: red
 
+.page-description
+  margin-top: 50px
+  &-wrap
+    text-align: center
+  h1
+    text-transform: uppercase
+    font-size: 50px
+    padding: 80px 0 20px
 
 .about-description
   margin-top: 50px
@@ -796,7 +829,83 @@ a:hover
           content: '- '
     &-autor
       text-align: center
-      
+.shipping
+  margin-bottom: 100px
+.shipping-wrapper
+  text-align: left
+  font-size: 15px
+  line-height: 1.7
+  h2
+    color: #e52714
+    text-transform: uppercase
+    margin-top: 15px
+    position: relative
+    &.icon
+      padding-left: 50px
+      &::before
+        position: absolute
+        font-family: 'font-awasome'
+        font-size: 40px
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+      &-1::before
+        content: '\f0d1'
+      &-2::before
+        content: '\f002'
+      &-3::before
+        content: '\f046'
+  p
+    margin-bottom: 0
+
+.catalog
+  margin-bottom: 100px
+  img
+    width: 100%
+  &-filter
+    border-right: 1px solid #ffd7d3
+.fix
+  position: fixed
+
+.btn
+  outline: none 0
+  border: none
+  border-radius: 5px
+  padding: 10px
+  background: #fff
+  margin-bottom: 15px
+  transition: all .3s
+  font-weight: bold
+  color: #333
+  box-shadow: 0 0 2px #ccc
+  &:hover
+    background-color: #333333
+    cursor: pointer
+    animation: hvr-push .2s
+    color: #fff
+  &:focus
+    outline: none 0
+.mixitup-control-active
+  background-color: #333333
+  color: #fff
+.dropdown
+  margin-bottom: 15px
+  outline: none 0
+  span
+    font-weight: bold
+.dropdown-menu
+  outline: none 0
+  .mixitup-control-active
+    background-color: #333
+  button
+    background: transparent
+    outline: none 0
+    width: 100%
+    height: 100%
+    border: none
+    padding: 15px
+    font-weight: bold
+
 /*==========  anomation  ==========*/
 =keyframes($animation-name)
   @-webkit-keyframes #{$animation-name}

@@ -132,6 +132,36 @@ $(document).ready(function () {
       }
     });
     
+    if($('div').is(".mixit-1")){
+
+      var containerEl = document.querySelector('.mixit-1');
+
+      var mixer = mixitup(containerEl);
+    }
+
+    /*Dropdown Menu*/
+    $('.dropdown').click(function () {
+      $(this).attr('tabindex', 1).focus();
+      $(this).toggleClass('active');
+      $(this).find('.dropdown-menu').slideToggle(300);
+    });
+    $('.dropdown').focusout(function () {
+      $(this).removeClass('active');
+    });
+    $('.dropdown .dropdown-menu li').click(function () {
+      $(this).parents('.dropdown').find('span').text($(this).text());
+      $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
+      $(this).find('button').trigger('click');
+    });
+    /*End Dropdown Menu*/
+
+
+$('.dropdown-menu li').click(function () {
+var input = '<strong>' + $(this).parents('.dropdown').find('input').val() + '</strong>',
+msg = '<span class="msg">Hidden input value: ';
+$('.msg').html(msg + input + '</span>');
+}); 
+
     jssor_1_slider_init = function() {
 
         var jssor_1_SlideoTransitions = [
@@ -190,5 +220,7 @@ $(document).ready(function () {
     };
 
     jssor_1_slider_init();
+
+
 
 });
