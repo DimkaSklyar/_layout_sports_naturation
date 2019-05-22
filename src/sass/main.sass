@@ -2,8 +2,11 @@
 @import "fonts"
 @import "libs"
 @import "../libs/slider/scss/style.scss"
+@import "main.scss"
 
 /*==========  user style  ==========*/
+hr
+  width: 100%
 .view
   background-color: #e52714
   border: none
@@ -907,6 +910,46 @@ a:hover
     font-weight: bold
 
 /*==========  anomation  ==========*/
+#small-dialog
+  padding-bottom: 40px
+  min-width: 750px
+  .small-dialog__img
+    overflow: hidden
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-grow: 1
+    height: 100%
+    img
+      object-fit: contain
+      width: 100%
+      height: 100%
+  h2
+    text-transform: uppercase
+    font-weight: 600
+  .price
+    font-weight: bold
+    font-size: 1.1em
+    color: #000
+    &+.fa
+      color: #000
+#retalForm
+  input
+    width: 100%
+    padding: 15px 10px
+    font-family: 'Montserrat Alternates', sans-serif
+    background-color: #f7f7f7
+    color: #333
+    border: none
+    outline: none 0
+    margin-bottom: 15px
+#submitButton
+  width: 100%
+
+
+
+
+
 =keyframes($animation-name)
   @-webkit-keyframes #{$animation-name}
     @content
