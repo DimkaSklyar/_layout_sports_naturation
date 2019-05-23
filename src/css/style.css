@@ -9511,7 +9511,7 @@ button.btn-form {
 
 a:hover {
   text-decoration: none;
-  z-index: 9999;
+  z-index: 9;
 }
 
 .page-header {
@@ -9956,10 +9956,6 @@ a:hover {
 
 .product-inner figure img {
   transition: .3s;
-}
-
-.product-inner figure:hover img {
-  transform: scale(1.1);
 }
 
 .product-inner .product-item-wrap {
@@ -10961,6 +10957,8 @@ a:hover {
 #small-dialog {
   padding-bottom: 40px;
   min-width: 750px;
+  z-index: 99;
+  position: relative;
 }
 
 #small-dialog .small-dialog__img {
