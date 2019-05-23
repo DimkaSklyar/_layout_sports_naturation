@@ -34,6 +34,16 @@ $('#question-form').submit(function(e){
   AjaxFormRequest('messegeResult-question','question-form','./feedback.php');
 });
 
+$('#feedback-2').submit(function(e){
+  e.preventDefault();
+  AjaxFormRequest('message-result','feedback-2','./feedback-2.php');
+});
+
+$('#retalForm').submit(function(e){
+  e.preventDefault();
+  AjaxFormRequest('messegeResult-order','retalForm','./order.php');
+});
+
 
 $(".category-href").click(function () {
   var getValue = $(this).attr('id');
@@ -224,6 +234,8 @@ $(document).ready(function () {
       $(a[i]).trigger('click');
     }
   }
+  localStorage.setItem('button', 'all');
+
 
   /*Dropdown Menu*/
   $('.dropdown').click(function () {

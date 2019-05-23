@@ -9499,6 +9499,10 @@ button.btn-form {
   padding: 20px 60px;
 }
 
+.ta-l {
+  text-align: left;
+}
+
 .container > h2 {
   text-transform: uppercase;
   margin-bottom: 50px;
@@ -11001,6 +11005,32 @@ a:hover {
 }
 
 #submitButton {
+  width: 100%;
+}
+
+.contacts-page {
+  padding: 0 0 60px;
+}
+
+.contacts-page .map {
+  margin-top: 40px;
+}
+
+#feedback-2 input,
+#feedback-2 textarea {
+  display: block;
+  width: 100%;
+  padding: 13px 18px;
+  font-size: inherit;
+  min-height: 2em;
+  vertical-align: baseline;
+  background: #fff;
+  border: 1px solid #333;
+  border-radius: 0;
+  margin-bottom: 15px;
+}
+
+#feedback-2 button {
   width: 100%;
 }
 
